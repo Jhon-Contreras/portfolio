@@ -1,115 +1,99 @@
-import Image from "next/image";
-import { Geist, Geist_Mono } from "next/font/google";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
+import CursorHalo from "@/components/CursorHalo";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
+import { Inter } from "next/font/google";
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
   return (
-    <div
-      className={`${geistSans.className} ${geistMono.className} grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]`}
-    >
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              src/pages/index.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+    <main className="min-h-screen bg-slate-900 relative overflow-hidden">
+      <CursorHalo />
+      {/* Decorative blurred gradients */}
+      <div className="absolute -left-24 -top-24 w-[420px] h-[420px] rounded-full bg-gradient-to-br from-[#006E9F] to-indigo-500 opacity-40 blur-3xl transform-gpu -translate-x-6 -translate-y-6 pointer-events-none"></div>
+      <div className="absolute right-0 bottom-0 w-[480px] h-[480px] rounded-full bg-gradient-to-tr from-pink-500 via-rose-400 to-amber-300 opacity-30 blur-3xl transform-gpu translate-x-12 translate-y-12 pointer-events-none"></div>
+
+      <div className="relative z-10 flex min-h-screen items-center justify-center px-6 py-24">
+        <section className="max-w-4xl w-full">
+          <div className="mx-auto backdrop-blur-sm bg-white/6 border border-white/6 rounded-2xl p-10 shadow-2xl">
+            <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
+              <div>
+                <h1
+                  className={`${inter.className} text-4xl sm:text-5xl font-extrabold tracking-tight text-white`}
+                >
+                  Jhon Contreras
+                </h1>
+                <p className={`${inter.className} mt-3 text-2xl text-gray-200`}>
+                  Front End Developer
+                </p>
+                <p
+                  className={`${inter.className} text-md text-blue-400 font-light mt-1`}
+                >
+                  React · Next.js · TypeScript · Tailwind
+                </p>
+
+                {/**
+                *  <div className="mt-6 flex flex-wrap gap-3">
+                  <Link
+                    href="#portfolio"
+                    className="inline-flex items-center gap-3 rounded-full px-5 py-2.5 bg-white/10 hover:bg-white/20 text-white transition"
+                  >
+                    Ver portfolio
+                  </Link>
+
+                  <Link
+                    href="#contact"
+                    className="inline-flex items-center gap-3 rounded-full px-5 py-2.5 border border-white/10 hover:bg-white/5 text-white transition"
+                  >
+                    Contacto
+                  </Link>
+                </div>
+                */}
+                <div className="mt-6 flex items-center gap-4">
+                  <a
+                    href="https://github.com/Jhon-Contreras"
+                    target="_blank"
+                    rel="noreferrer"
+                    aria-label="GitHub"
+                    className="inline-flex items-center gap-2 text-gray-200 hover:text-white"
+                  >
+                    <FaGithub /> <span className="sr-only">GitHub</span>
+                  </a>
+
+                  <a
+                    href="https://www.linkedin.com/in/jhoncontrerassoto/"
+                    target="_blank"
+                    rel="noreferrer"
+                    aria-label="LinkedIn"
+                    className="inline-flex items-center gap-2 text-gray-200 hover:text-white"
+                  >
+                    <FaLinkedin /> <span className="sr-only">LinkedIn</span>
+                  </a>
+                </div>
+              </div>
+
+              <div className="flex-1 flex items-center justify-center">
+                {/* Example hero card / screenshot placeholder */}
+                <div className="w-full max-w-sm rounded-xl border border-white/6 bg-gradient-to-b from-white/3 to-white/2 p-4 shadow-lg">
+                  <div className="h-44 rounded-lg bg-gradient-to-br from-white/6 to-white/3 animate-pulse" />
+                  <div className="mt-4 space-y-2">
+                    <div className="h-3 w-3/4 rounded bg-white/6" />
+                    <div className="h-3 w-1/2 rounded bg-white/6" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* small footer note */}
+          <p
+            className={`${inter.className} mt-6 text-center text-xs text-gray-500`}
           >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+            Built with Next.js + Tailwind — © {new Date().getFullYear()} Jhon
+            Contreras
+          </p>
+        </section>
+      </div>
+    </main>
   );
 }
