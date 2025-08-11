@@ -16,16 +16,16 @@ export default function Home() {
       <main className="min-h-screen bg-slate-900 relative overflow-hidden">
         <CursorHalo />
         {/* Decorative blurred gradients */}
-        <div className="absolute -left-24 -top-24 w-[420px] h-[420px] rounded-full bg-gradient-to-br from-[#006E9F] to-indigo-500 opacity-40 blur-3xl transform-gpu -translate-x-6 -translate-y-6 pointer-events-none"></div>
-        <div className="absolute right-0 bottom-0 w-[480px] h-[480px] rounded-full bg-gradient-to-tr from-pink-500 via-rose-400 to-amber-300 opacity-30 blur-3xl transform-gpu translate-x-12 translate-y-12 pointer-events-none"></div>
+        <div className="absolute -left-24 -top-24 w-[420px] h-[420px] rounded-full bg-gradient-to-br from-[#006E9F] to-indigo-500 opacity-40 blur-3xl pointer-events-none animate-float1"></div>
+        <div className="absolute right-0 bottom-0 w-[480px] h-[480px] rounded-full bg-gradient-to-tr from-pink-500 via-rose-400 to-amber-300 opacity-30 blur-3xl pointer-events-none animate-float2"></div>
 
-        <div className="relative z-10 flex min-h-screen items-center justify-center px-6 py-24">
-          <section className="max-w-4xl w-full">
-            <div className="mx-auto backdrop-blur-sm bg-white/6 border border-white/6 rounded-2xl p-10 shadow-2xl">
-              <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
+        <div className="relative z-10 flex min-h-screen items-start justify-center px-6 py-24">
+          <section className="max-w-6xl w-full">
+            <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6 h-auto md:h-[70vh]">
+              <div className="flex-1 flex items-center justify-start">
                 <div>
                   <h1
-                    className={`${inter.className} text-4xl sm:text-5xl font-extrabold tracking-tight text-white`}
+                    className={`${inter.className} text-4xl sm:text-6xl font-extrabold tracking-tight text-white`}
                   >
                     Jhon Contreras
                   </h1>
@@ -39,25 +39,7 @@ export default function Home() {
                   >
                     React · Next.js · TypeScript · Tailwind
                   </p>
-
-                  {/**
-                *  <div className="mt-6 flex flex-wrap gap-3">
-                  <Link
-                    href="#portfolio"
-                    className="inline-flex items-center gap-3 rounded-full px-5 py-2.5 bg-white/10 hover:bg-white/20 text-white transition"
-                  >
-                    Ver portfolio
-                  </Link>
-
-                  <Link
-                    href="#contact"
-                    className="inline-flex items-center gap-3 rounded-full px-5 py-2.5 border border-white/10 hover:bg-white/5 text-white transition"
-                  >
-                    Contacto
-                  </Link>
-                </div>
-                */}
-                  <div className="mt-6 flex items-center gap-4">
+                  <div className="mt-10 flex items-center gap-4">
                     <a
                       href="https://github.com/Jhon-Contreras"
                       target="_blank"
@@ -80,15 +62,49 @@ export default function Home() {
                   </div>
                 </div>
 
-                <div className="flex-1 flex items-center justify-center">
-                  {/* Example hero card / screenshot placeholder */}
-                  <div className="w-full max-w-sm rounded-xl border border-white/6 bg-gradient-to-b from-white/3 to-white/2 p-4 shadow-lg">
-                    <div className="h-44 rounded-lg bg-gradient-to-br from-white/6 to-white/3 animate-pulse" />
-                    <div className="mt-4 space-y-2">
-                      <div className="h-3 w-3/4 rounded bg-white/6" />
-                      <div className="h-3 w-1/2 rounded bg-white/6" />
-                    </div>
-                  </div>
+                {/**
+                *  <div className="mt-6 flex flex-wrap gap-3">
+                  <Link
+                    href="#portfolio"
+                    className="inline-flex items-center gap-3 rounded-full px-5 py-2.5 bg-white/10 hover:bg-white/20 text-white transition"
+                  >
+                    Ver portfolio
+                  </Link>
+
+                  <Link
+                    href="#contact"
+                    className="inline-flex items-center gap-3 rounded-full px-5 py-2.5 border border-white/10 hover:bg-white/5 text-white transition"
+                  >
+                    Contacto
+                  </Link>
+                </div>
+                */}
+              </div>
+
+              <div className="flex-1 flex items-center justify-start">
+                {/* Example hero card / screenshot placeholder */}
+                <div className="w-full ">
+                  <p className={`${inter.className} font-light text-gray-300`}>
+                    Ingeniero en Informática y Desarrollador Front-End con más
+                    de 7 años de experiencia en creación de sitios e interfaces
+                    web funcionales y escalables. He colaborado tanto en
+                    agencias como freelance, trabajando junto a equipos de UX/UI
+                    y clientes de diversos sectores.
+                  </p>
+                  <p
+                    className={`${inter.className} mt-3 font-light text-gray-300`}
+                  >
+                    Especializado en React, TypeScript, Next.js, HTML, CSS/SASS
+                    y WordPress/WooCommerce. Experiencia en integración de APIs,
+                    pasarelas de pago y optimización de rendimiento.
+                  </p>
+                  <p
+                    className={`${inter.className} mt-3 font-light text-gray-300`}
+                  >
+                    Comprometido con código limpio, experiencias fluidas en
+                    múltiples dispositivos y trabajo colaborativo para entregar
+                    valor en cada proyecto.
+                  </p>
                 </div>
               </div>
             </div>

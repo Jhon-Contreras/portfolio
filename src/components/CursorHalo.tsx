@@ -16,10 +16,10 @@ export default function CursorHalo() {
     <div
       className="pointer-events-none fixed top-0 left-0 z-50 transition-transform duration-75 ease-out"
       style={{
-        transform: `translate(${pos.x - 75}px, ${pos.y - 75}px)`,
+        transform: `translate(${pos.x - 200}px, ${pos.y - 200}px)`,
       }}
     >
-      <div className="w-36 h-36 rounded-full bg-blue-400/10 blur-3xl"></div>
+      <div className="w-[400px] h-[400px] rounded-full bg-blue-400/5 blur-3xl"></div>
     </div>
   );
 }
