@@ -37,7 +37,7 @@ export default function Home() {
                   <p
                     className={`${inter.className} text-md text-blue-400 font-light mt-1`}
                   >
-                    React · Next.js · TypeScript · Tailwind
+                    React · Next.js · VueJS · TypeScript · Tailwind
                   </p>
                   <div className="mt-10 flex items-center gap-4">
                     <a
